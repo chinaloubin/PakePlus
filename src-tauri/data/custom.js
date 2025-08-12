@@ -4,7 +4,6 @@ console.log(
 )
 
 // very important, if you don't know what it is, don't touch it
-// 非常重要，不懂代码不要动，这里可以解决80%的问题，也可以生产1000+的bug
 const hookClick = (e) => {
     const origin = e.target.closest('a')
     const isBaseTargetBlank = document.querySelector(
@@ -27,4 +26,5 @@ window.open = function (url, target, features) {
     console.log('open', url, target, features)
     location.href = url
 }
+
 document.addEventListener('click', hookClick, { capture: true })
